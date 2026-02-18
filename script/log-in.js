@@ -7,7 +7,7 @@ document.getElementById('login-btn')
   const pin = inputPin.value
   if(contactNumber === '11111111111' && pin === '1111'){
     alert('Log in Successfully')
-    window.location.assign('/homes.html')
+    window.location.assign('/home.html')
   }
   else{
     alert('Log in Failed')
