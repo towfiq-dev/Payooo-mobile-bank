@@ -22,6 +22,14 @@ document.getElementById('cashout-btn')
   if (pin === '1111') {
     alert('Cashout Succesfull')
     setBalance(newBalance)
+    const history = document.getElementById('history-container')
+    const newHistory = document.createElement('div')
+    newHistory.innerHTML =`
+    <div class="transaction-card p-5 bg-base-200">
+        Cashout ${cashoutAmount} TK Succesful to ${cashoutNumber}, at ${new Date()}
+    </div>
+    `
+    history.append(newHistory)
    }
    else{
      alert('Invalid Pin')

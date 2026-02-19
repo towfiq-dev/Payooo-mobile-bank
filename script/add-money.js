@@ -25,6 +25,14 @@ document.getElementById('add-money-btn')
     alert(`Add Money Succesful from ${bankAccount}
     at ${new Date()}`);
     setBalance(newBalance)
+    const history = document.getElementById('history-container')
+    const newHistory = document.createElement('div')
+    newHistory.innerHTML =`
+    <div class="transaction-card p-5 bg-base-200">
+        Add Money Succesful from ${bankAccount}, acc-no $(accNo)at ${new Date()}
+    </div>
+    `
+    history.append(newHistory)
   }
   else{
     alert('Invalid Pin')
