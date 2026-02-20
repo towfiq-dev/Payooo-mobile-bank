@@ -22,7 +22,7 @@ document.getElementById('transfer-btn').addEventListener('click', function () {
     }
 
     const newBalance = currentBalance - Number(amount);
-    setBalance(newBalance);
+    setBalence(newBalance);
 
     const time = new Date().toLocaleString();
     alert(`Transfer Successful! \nAmount: $${amount} \nTo: ${number} \nTime: ${time}`);
