@@ -20,7 +20,8 @@ document.getElementById('cashout-btn')
   
   const pin = getValueFromInput('cashout-pin')
   if (pin === '1111') {
-    alert('Cashout Succesfull')
+   alert(`Cashout Succesful to ${cashoutNumber},
+    at ${new Date()}`);
     setBalance(newBalance)
     const history = document.getElementById('history-container')
     const newHistory = document.createElement('div')

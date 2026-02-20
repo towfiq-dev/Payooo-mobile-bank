@@ -19,14 +19,12 @@ function setBalance(value){
 }
 
 function showOnly(id) {
-  const addMoney = document.getElementById('add-money')
-  const cashOut = document.getElementById('cashout')
-  const history = document.getElementById('history')
+  const sections = ['add-money', 'cashout', 'history', 'transfer-money', 'get-bonus', 'pay-bill'];
+  
+  sections.forEach(sectionId => {
+    const section = document.getElementById(sectionId);
+    if (section) section.classList.add('hidden');
+  });
 
-  addMoney.classList.add('hidden')
-  cashOut.classList.add('hidden')
-  history.classList.add('hidden')
-
-  const selected = document.getElementById(id)
-  selected.classList.remove('hidden')
+  document.getElementById(id).classList.remove('hidden');
 }
